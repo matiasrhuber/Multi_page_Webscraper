@@ -1,0 +1,5 @@
+,Currency,Currency,Currency,Currency,Currency,Currency,Stock_Market,Stock_Market,Stock_Market,Stock_Market,Stock_Market,Stock_Market,Base_Interest_Rate,Base_Interest_Rate,Base_Interest_Rate,Base_Interest_Rate,Base_Interest_Rate,Base_Interest_Rate,GDP_Growth_Rate,GDP_Growth_Rate,GDP_Growth_Rate,GDP_Growth_Rate,GDP_Growth_Rate,GDP_Growth_Rate,Unemployment_Rate,Unemployment_Rate,Unemployment_Rate,Unemployment_Rate,Unemployment_Rate,Unemployment_Rate,Yield_Curve_2Y,Yield_Curve_10Y
+,Actual,Q1,Q2,Q3,Q4,2023,Actual,Q1,Q2,Q3,Q4,2023,Actual,Q1,Q2,Q3,Q4,2023,Actual,Q1,Q2,Q3,Q4,2023,Actual,Q1,Q2,Q3,Q4,2023,,
+united-states,110.75,113,115,116,118,121,32861.80,30100,29149,28229,27337,25637,0.40,0.4,0.4,0.4,0.4,0.3,2.60,0.2,0.5,0.8,1.5,1.2,3.50,3.8,3.9,4,4.2,4.4,4.424%,1.957%
+brazil,5.29,5.31,5.47,5.62,5.79,6.13,114539.05,115887,111978,108212,104566,97633,13.75,13.75,13.75,13.5,12.25,11,1.20,0.8,0.2,0.2,0.1,0.5,8.70,8.5,9.1,9.5,9.4,9.4,12.833%,11.990%
+germany,1.00,0.97,0.96,0.94,0.93,0.9,13243.33,12237,11762,11306,10867,10040,2.00,2.5,3,3.5,3.5,3.5,0.30,-0.6,0.4,0.5,0.4,0.4,5.50,5.9,6.3,6.6,6.8,6.7,1.945%,2.101%

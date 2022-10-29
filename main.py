@@ -62,44 +62,53 @@ for country in countries:
     soup_table = soup.find_all('td', class_='table-value')
 
     if country == 'united-states':
-        for currency in soup_table[0:5]:
+        for currency in soup_table[6:12]:
             US_cu.append(currency.text.strip())
-        for stock_market in soup_table[6:11]:
+        for stock_market in soup_table[0:6]:
             US_sm.append(stock_market.text.strip())
-        for interest_rate in soup_table[48:53]:
+        for interest_rate in soup_table[48:54]:
             US_int.append(interest_rate.text.strip())
-        for GDP in soup_table[18:23]:
+        for GDP in soup_table[18:24]:
             US_GDP.append(GDP.text.strip())
-        for job in soup_table[30:35]:
+        for job in soup_table[30:36]:
             US_jobs.append(job.text.strip())
     
     if country == 'brazil':
-        for currency in soup_table[0:5]:
+        for currency in soup_table[0:6]:
             BR_cu.append(currency.text.strip())
-        for stock_market in soup_table[6:11]:
+        for stock_market in soup_table[6:12]:
             BR_sm.append(stock_market.text.strip())
-        for interest_rate in soup_table[48:53]:
+        for interest_rate in soup_table[48:54]:
             BR_int.append(interest_rate.text.strip())
-        for GDP in soup_table[18:23]:
+        for GDP in soup_table[18:24]:
             BR_GDP.append(GDP.text.strip())
-        for job in soup_table[30:35]:
+        for job in soup_table[30:36]:
             BR_jobs.append(job.text.strip())
     
     if country == 'germany':
-        for currency in soup_table[0:5]:
+        for currency in soup_table[6:12]:
             GER_cu.append(currency.text.strip())
-        for stock_market in soup_table[6:11]:
+        for stock_market in soup_table[0:6]:
             GER_sm.append(stock_market.text.strip())
-        for interest_rate in soup_table[48:53]:
+        for interest_rate in soup_table[48:54]:
             GER_int.append(interest_rate.text.strip())
-        for GDP in soup_table[18:23]:
+        for GDP in soup_table[18:24]:
             GER_GDP.append(GDP.text.strip())
-        for job in soup_table[30:35]:
+        for job in soup_table[30:36]:
             GER_jobs.append(job.text.strip())
+
+### Organising and Gathering Data ###
+
+df_data = pd.DataFrame([US_cu+US_sm+US_int+US_GDP+US_jobs,BR_cu+BR_sm+BR_int+BR_GDP+BR_jobs,
+                        GER_cu+GER_sm+GER_int+GER_GDP+GER_jobs],
+                        columns=pd.MultiIndex.from_product([['Currency','Stock_Market','Base_Interest_Rate','GDP_Growth_Rate','Unemployment_Rate'],['Actual','Q1','Q2','Q3','Q4','2023']]),
+                        index=countries)
+
+df_data['Yield_Curve_2Y'] = US_yc[5],BR_yc[4],GER_yc[5]
+df_data['Yield_Curve_10Y'] = GER_yc[9],BR_yc[8],GER_yc[13]
+
+
 # %%
-US_jobs
-# %%
-soup_table[0:5]
-# %%
-US_sm
+df_data.to_csv('ML_Model_Data.csv')
+
 # %%
